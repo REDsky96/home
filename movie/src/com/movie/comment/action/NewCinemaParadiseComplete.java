@@ -11,8 +11,11 @@ import com.movie.comment.dao.NewCinemaParadiseDAO;
 import com.movie.comment.dto.NewCinemaParadiseDTO;
 import com.opensymphony.xwork2.ActionSupport;
 
-public class NewCinemaParadise extends ActionSupport implements SessionAware{
+public class NewCinemaParadiseComplete extends ActionSupport implements SessionAware{
 
+	private String name;
+	private String star;
+	private String comment;
 
 	private Map<String,Object>session;
 	List<NewCinemaParadiseDTO> dtoList = new ArrayList<NewCinemaParadiseDTO>();
@@ -22,13 +25,13 @@ public class NewCinemaParadise extends ActionSupport implements SessionAware{
 	public String execute() throws SQLException {
 		String ret = ERROR;
 		NewCinemaParadiseDAO dao = new NewCinemaParadiseDAO();
-
-
+		int count = dao.insert(name, star, comment);
+		if (count>0) {
 			dtoList = dao.getComment();
 			session.put("dtoList", dtoList);
 
 			ret = SUCCESS;
-
+		}
 		return ret;
     }
 
@@ -40,5 +43,28 @@ public class NewCinemaParadise extends ActionSupport implements SessionAware{
 		this.session = session;
 	}
 
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getStar() {
+		return star;
+	}
+
+	public void setStar(String star) {
+		this.star = star;
+	}
+
+	public String getComment() {
+		return comment;
+	}
+
+	public void setComment(String comment) {
+		this.comment = comment;
+	}
 
 }

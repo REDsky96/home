@@ -101,15 +101,15 @@
 
     <div class = "right_box">
     <s:iterator value = "#session.dtoList">
-
     投稿者:<s:property value = "name"/>
     評価:<s:property value = "star"/>
     <br>
     感想:<s:property value = "comment"/>
     <br>
-
     </s:iterator>
-      <s:form action = "NewCinemaParadiseComplete">
+    <br>
+    <br>
+      <s:form action = "NewCinemaParadise">
         投稿者名:<input type = "text" name = "name" value = ""/>
         評価:<select name = "star">
               <option value = "★">★</option>
@@ -123,6 +123,8 @@
         感想:<s:textarea name = "comment" cols = "50" rows = "10"/>
         <s:submit value = "コメントする"/>
       </s:form>
+
+      <p>homeに戻る場合は<a href ="home.jsp">こちら</a></p>
 
     </div>
 
