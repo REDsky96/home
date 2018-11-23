@@ -9,7 +9,7 @@
 <meta name="description" content="" />
 <meta name="keywords" content="" />
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<title>home</title>
+<title>NewCinemaParadise</title>
 <style type="text/css">
   .header{
     whidth: 100%;
@@ -19,10 +19,6 @@
     line-height: 70px;
     text-align: center;
     }
-
-    main{
-      background-color: #DD0000;
-      }
 
     .right_film{
       float: right;
@@ -37,13 +33,31 @@
       display: block;
     }
 
-    table img{
-      text-align: center;
-      margin: 0 auto;
+    .main {
+      margin-top: 50px;
+    }
+
+    .left_box {
+      float: left;
+    }
+
+    .left_box img {
+      width: 350px;
+      margin-left: 60px;
+      margin-top: 30px;
+    }
+
+    .profile {
+      margin-left: 65px;
+    }
+
+    .right_box {
+      float: left;
       margin-left: 50px;
       margin-top: 30px;
-      width: 180px;
     }
+
+
 </style>
 </head>
 <body>
@@ -75,17 +89,40 @@
      </div>
     </div>
 
-    <table>
-      <tr>
+    <div class = "left_box">
+      <img src="144621_01.jpg">
+      <div class = "profile">
+        <p>監督名: ジュゼッペ・トルナトーレ</P>
+        <p>出演者: サルバトーレ・カシオ フィリップ・ノワレ</P>
+      </div>
+    </div>
 
-        <td><a href ='<s:url action = "NewCinemaParadise"/>'><img src="144621_01.jpg"></a></td>
-        <td><img src="51sYu89RSOL.jpg"></td>
-        <td><img src="51GUQnZugVL._SY445_.jpg"></td>
-        <td><img src="41eh+yYG6cL._SY445_.jpg"></td>
-        <td><img src="51Ee-EBYKHL._SY445_.jpg"></td>
-      </tr>
-    </table>
 
+
+    <div class = "right_box">
+    <s:iterator value = "#session.dtoList">
+    投稿者:<s:property value = "name"/>
+    評価:<s:property value = "star"/>
+    <br>
+    感想:<s:property value = "comment"/>
+    <br>
+    </s:iterator>
+      <s:form action = "NewCinemaParadise">
+        投稿者名:<input type = "text" name = "name" value = ""/>
+        評価:<select name = "star">
+              <option value = "★">★</option>
+              <option value = "★★">★★</option>
+              <option value = "★★★">★★★</option>
+              <option value = "★★★★">★★★★</option>
+              <option value = "★★★★★">★★★★★</option>
+            </select>
+        <br>
+        <br>
+        感想:<s:textarea name = "comment" cols = "50" rows = "10"/>
+        <s:submit value = "コメントする"/>
+      </s:form>
+
+    </div>
 
   </div>
 

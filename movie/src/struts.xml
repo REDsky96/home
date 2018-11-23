@@ -7,6 +7,9 @@
   <constant name = "struts.devMode" value="true"/>
   <package name = "com.movie.comment.action" extends="struts-default">
 
+    <action name = "NewCinemaParadise" class = "com.movie.comment.action.NewCinemaParadise" method = "execute">
+      <result name = "success">newcinemaparadise.jsp</result>
+    </action>
 
   </package>
 </struts>
