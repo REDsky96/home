@@ -101,11 +101,13 @@
 
     <div class = "right_box">
     <s:iterator value = "#session.dtoList">
+
     投稿者:<s:property value = "name"/>
     評価:<s:property value = "star"/>
     <br>
     感想:<s:property value = "comment"/>
     <br>
+
     </s:iterator>
       <s:form action = "NewCinemaParadise">
         投稿者名:<input type = "text" name = "name" value = ""/>

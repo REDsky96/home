@@ -18,7 +18,7 @@ public class NewCinemaParadiseDAO {
 	  DBConnector db = new DBConnector();
 	  Connection con = db.getConnection();
 
-	  String sql = "select * from newcinema";
+	  String sql = "select * from newcinema ORDER BY id DESC";
 
 	  try {
 		  PreparedStatement ps = con.prepareStatement(sql);
