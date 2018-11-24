@@ -55,6 +55,13 @@
       float: left;
       margin-left: 50px;
       margin-top: 30px;
+      overflow:scroll;
+    }
+
+    .scroll {
+      width: 250px;
+      height: 100px;
+
     }
 
 
@@ -107,16 +114,15 @@
     感想:<s:property value = "comment"/>
     <br>
     </s:iterator>
-    <br>
-    <br>
+    </div>
       <s:form action = "NewCinemaParadise">
         投稿者名:<input type = "text" name = "name" value = ""/>
         評価:<select name = "star">
-              <option value = "★">★</option>
-              <option value = "★★">★★</option>
-              <option value = "★★★">★★★</option>
-              <option value = "★★★★">★★★★</option>
-              <option value = "★★★★★">★★★★★</option>
+              <option value = "⭐">⭐</option>
+              <option value = "⭐⭐">⭐⭐</option>
+              <option value = "⭐⭐⭐">⭐⭐⭐</option>
+              <option value = "⭐⭐⭐⭐">⭐⭐⭐⭐</option>
+              <option value = "⭐⭐⭐⭐⭐">⭐⭐⭐⭐⭐</option>
             </select>
         <br>
         <br>
@@ -127,8 +133,6 @@
       <p>homeに戻る場合は<a href ="home.jsp">こちら</a></p>
 
     </div>
-
-  </div>
 
 </body>
 </html>
