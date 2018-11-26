@@ -8,7 +8,9 @@ create table newcinema(
 id int not null primary key auto_increment,
 name varchar(50),
 star varchar(50),
-comment varchar(255)
+comment varchar(255),
+insert_date datetime,
+updated_date datetime
 );
 
 create table godfather(

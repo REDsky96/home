@@ -20,8 +20,12 @@
     text-align: center;
     }
 
+    span {
+      color: red;}
+
     main{
       background-color: #DD0000;
+      width: 100%;
       }
 
     .right_film{
@@ -38,17 +42,28 @@
     }
 
     table img{
-      text-align: center;
+      text-algn: center;
       margin: 0 auto;
-      margin-left: 50px;
+      margin-left: 40px;
       margin-top: 30px;
-      width: 180px;
+      width: 65%;
+      height: auto;
     }
+
+    .footer {
+      whidth: 100%;
+      height: 70px;
+      background-color: black;
+      position:absolute;
+      bottom: 0;
+      left: 0;
+      }
+
 </style>
 </head>
 <body>
   <div class = "header">
-    <h1>映画に想いを伝える</h1>
+    <h1>FIL<span>M.R</span>eview</h1>
   </div>
 
   <div id = "main">
@@ -77,15 +92,16 @@
 
     <table>
       <tr>
-
-        <td><a href ='<s:url action = "NewCinemaParadise"/>'><img src="144621_01.jpg"></a></td>
-        <td><img src="51sYu89RSOL.jpg"></td>
-        <td><img src="51GUQnZugVL._SY445_.jpg"></td>
-        <td><img src="41eh+yYG6cL._SY445_.jpg"></td>
-        <td><img src="51Ee-EBYKHL._SY445_.jpg"></td>
+        <td><a href ='<s:url action = "NewCinemaParadise"/>'><img src="img/newcinema.jpg"></a></td>
+        <td><img src="img/godfather.jpg"></td>
+        <td><img src="img/orange.jpg"></td>
+        <td><img src="img/list.jpg"></td>
+        <td><img src="img/darkknight.jpg"></td>
       </tr>
     </table>
+  </div>
 
+  <div class = "footer">
 
   </div>
 

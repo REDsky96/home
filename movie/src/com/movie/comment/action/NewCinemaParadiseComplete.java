@@ -17,6 +17,7 @@ public class NewCinemaParadiseComplete extends ActionSupport implements SessionA
 	private String star;
 	private String comment;
 
+
 	private Map<String,Object>session;
 	List<NewCinemaParadiseDTO> dtoList = new ArrayList<NewCinemaParadiseDTO>();
 
@@ -62,6 +63,7 @@ public class NewCinemaParadiseComplete extends ActionSupport implements SessionA
 	public String getComment() {
 		return comment;
 	}
+
 
 	public void setComment(String comment) {
 		this.comment = comment;

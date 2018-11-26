@@ -67,7 +67,7 @@
       margin-top: 30px;
       margin-bottom: 20px;
       width: 100%;
-      height: 400px;
+      height: 350px;
       overflow: scroll;
       background-color: rightgrey;
     }
@@ -79,16 +79,17 @@
       padding-left: 1em;
     }
 
-    span{
+    span {
+      margin-right: 2em;
       font-size: 20px;
-      margin-right: 20px;
     }
 
 
     .from {
+      padding-top: 1px;
       float: left;
       margin-left: 50px;
-      margin-top: 20px;
+      margin-top: 1px;
     }
 
 
@@ -96,7 +97,7 @@
 </head>
 <body>
   <div class = "header">
-    <h1>映画に想いを伝える</h1>
+    <h1>FILM.Review</h1>
   </div>
 
     <div class = "right_film">
@@ -122,7 +123,7 @@
     </div>
 
     <div class = "left_box">
-      <img src="144621_01.jpg">
+      <img src="51HDQQCRP9L._SY445_.jpg">
       <div class = "profile">
         <h4>監督:</h4>ジュゼッペ・トルナトーレ
       </div>
@@ -132,10 +133,10 @@
     <div class = "right_box">
     <s:iterator value = "#session.dtoList">
     <div class = "comment_box">
-    <span>投稿者:</span><s:property value = "name"/>
-    評価:<s:property value = "star"/>
+    <span>投稿者:<s:property value = "name"/></span>
+    <span>評価:<s:property value = "star"/></span>
     <br>
-    感想:<s:property value = "comment"/>
+    <span>コメント:<br><s:property value = "comment"/></span>
     <br>
     </div>
     </s:iterator>
@@ -157,6 +158,7 @@
         感想:<s:textarea name = "comment" cols = "90" rows = "10"/>
         <s:submit value = "コメントする"/>
       </s:form>
+      <p>homeに戻る場合は<a href ="home.jsp">こちら</a></p>
     </div>
     </div>
 

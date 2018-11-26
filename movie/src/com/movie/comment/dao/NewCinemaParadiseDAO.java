@@ -9,6 +9,7 @@ import java.util.List;
 
 import com.movie.comment.dto.NewCinemaParadiseDTO;
 import com.movie.comment.util.DBConnector;
+import com.movie.comment.util.DateUtil;
 
 public class NewCinemaParadiseDAO {
 
@@ -29,6 +30,7 @@ public class NewCinemaParadiseDAO {
 			  dto.setName(rs.getString("name"));
 			  dto.setStar(rs.getString("star"));
 			  dto.setComment(rs.getString("comment"));
+			  dto.setDate(rs.getString("insert_date"));
 			  dtoList.add(dto);
 		  }
 	  }catch (SQLException e) {
@@ -43,17 +45,19 @@ public class NewCinemaParadiseDAO {
 	}
 
 	public int insert(String name, String star, String comment) throws SQLException {
+		DateUtil dateUtil = new DateUtil();
 		int ret = 0;
 		DBConnector db = new DBConnector();
 		Connection con = db.getConnection();
 
-		String sql = "insert into newcinema (name, star, comment) value(?,?,?)";
+		String sql = "insert into newcinema (name, star, comment, insert_date) value(?,?,?,?)";
 
 		try {
 			PreparedStatement ps = con.prepareStatement(sql);
 			ps.setString(1, name);
 			ps.setString(2, star);
 			ps.setString(3, comment);
+			ps.setString(4, dateUtil.getDate());
 
 			int i = ps.executeUpdate();
 			if(i>0) {
