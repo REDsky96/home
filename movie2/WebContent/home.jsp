@@ -26,6 +26,7 @@
     main{
       background-color: #DD0000;
       width: 100%;
+      text-align: center;
       }
 
     .right_film{
@@ -42,12 +43,9 @@
     }
 
     table img{
-      text-algn: center;
-      margin: 0 auto;
-      margin-left: 40px;
-      margin-top: 30px;
+      display: inline;
+      margin: 30px 40px;
       width: 65%;
-      height: auto;
     }
 
     .footer {
@@ -94,8 +92,8 @@
       <tr>
         <td><a href ='<s:url action = "NewCinemaParadise"/>'><img src="img/newcinema.jpg"></a></td>
         <td><a href ='<s:url action = "GodFather"/>'><img src="img/godfather.jpg"></a></td>
-        <td><img src="img/orange.jpg"></td>
-        <td><img src="img/list.jpg"></td>
+        <td><a href ='<s:url action = "Orange"/>'><img src="img/orange.jpg"></a></td>
+        <td><a href ='<s:url action = "Schindler"/>'><img src="img/list.jpg"></a></td>
         <td><img src="img/darkknight.jpg"></td>
       </tr>
     </table>

@@ -9,7 +9,7 @@
 <meta name="description" content="" />
 <meta name="keywords" content="" />
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<title>NewCinemaParadise</title>
+<title>Schindler'sList</title>
 <style type="text/css">
   .header{
     whidth: 100%;
@@ -104,10 +104,6 @@
       margin-top: 20px;
     }
 
-    .impression {
-      width: 600px;
-    }
-
 
 </style>
 </head>
@@ -140,34 +136,32 @@
     </div>
 
     <div class = "left_box">
-      <img src="img/newcinema.jpg">
+      <img src="img/list.jpg">
       <div class = "profile">
-        <strong><b>ニューシネマパラダイス</b></strong>
-        <h3>制作国:イタリア/フランス</h3>
-        <h3>制作年:1989</h3>
-        <h3>監督:ジュゼッペ・トルナトーレ</h3>
+        <strong><b>シンドラーのリスト</b></strong>
+        <h3>制作国:アメリカ</h3>
+        <h3>制作年:1993</h3>
+        <h3>監督:スティーブン・スピルバーグ</h3>
 
       </div>
     </div>
 
   <div class = "right">
     <div class = "right_box">
-    <s:iterator value = "#session.dtoList">
+    <s:iterator value = "#session.dtoListSchindler">
     <div class = "comment_box">
     <p>投稿者:<s:property value = "name"/></p>
     <p>評価:<s:property value = "star"/></p>
     <br>
-    <div class = "impression">
     感想:<s:property value = "comment"/>
     <br>
-    </div>
     </div>
     </s:iterator>
     </div>
 
     <div class = "form">
     <h2>〜コメントを書く〜</h2>
-      <s:form action = "NewCinemaParadiseComplete">
+      <s:form action = "SchindlerComplete">
         投稿者名:<input type = "text" name = "name" value = ""/>
         評価:<select name = "star">
               <option value = "⭐">⭐️</option>

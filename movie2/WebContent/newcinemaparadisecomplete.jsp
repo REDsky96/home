@@ -24,11 +24,11 @@
       color: red;
     }
 
-    #a {
+    #main {
       whidth: 100%;
       height: 720px;
       background: linear-gradient(#C2EEFF,#75A9FF);
-      }
+    }
 
     .right_film{
       float: right;
@@ -58,9 +58,9 @@
       margin-top: 1em;
       line-height: 1em;
       text-shadow: 1px 1px 0 #000,
-               -1px 1px 0 #000,
-               1px -1px 0 #000,
-               -1px -1px 0 #000;
+                   -1px 1px 0 #000,
+                   1px -1px 0 #000,
+                   -1px -1px 0 #000;
       color: white;
     }
 
@@ -79,9 +79,9 @@
       margin-top: 30px;
       margin-bottom: 20px;
       width: 100%;
+      word-wrap: break-word;
       height: 350px;
       overflow: scroll;
-      background-color: rightgrey;
     }
 
     .comment_box {
@@ -103,6 +103,11 @@
       margin-top: 20px;
     }
 
+    .impression {
+      width: 600px;
+    }
+
+
 
 </style>
 </head>
@@ -111,7 +116,7 @@
     <h1>FIL<span>M.R</span>eview</h1>
   </div>
 
-<div id = "a">
+<div id = "main">
     <div class = "right_film">
      <div class = "tate">
       <img src = "publicdomainq-0003005png.jpg">
@@ -141,8 +146,7 @@
         <h3>制作国:イタリア/フランス</h3>
         <h3>制作年:1989</h3>
         <h3>監督:ジュゼッペ・トルナトーレ</h3>
-
-      </div>
+     </div>
     </div>
 
   <div class = "right">
@@ -152,8 +156,10 @@
     <p>投稿者:<s:property value = "name"/></p>
     <p>評価:<s:property value = "star"/></p>
     <br>
+    <div class = "impression">
     感想:<s:property value = "comment"/>
     <br>
+    </div>
     </div>
     </s:iterator>
     </div>

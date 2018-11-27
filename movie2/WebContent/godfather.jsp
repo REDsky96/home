@@ -9,7 +9,7 @@
 <meta name="description" content="" />
 <meta name="keywords" content="" />
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<title>NewCinemaParadise</title>
+<title>GodFather</title>
 <style type="text/css">
   .header{
     whidth: 100%;
@@ -19,6 +19,16 @@
     line-height: 70px;
     text-align: center;
     }
+
+    span {
+      color: red;
+    }
+
+    #a {
+      whidth: 100%;
+      height: 720px;
+      background: linear-gradient(#C2EEFF,#75A9FF);
+      }
 
     .right_film{
       float: right;
@@ -45,15 +55,17 @@
     }
 
     .profile {
-      border-bottom: dashed 1px black;
+      margin-top: 1em;
+      line-height: 1em;
+      text-shadow: 1px 1px 0 #000,
+               -1px 1px 0 #000,
+               1px -1px 0 #000,
+               -1px -1px 0 #000;
+      color: white;
     }
 
-    h4 {
-      display: inline;
-    }
-
-    ul {
-      list-style: none;
+    strong {
+      font-size: 32px;
     }
 
     .right {
@@ -73,23 +85,22 @@
     }
 
     .comment_box {
+      border: double 5px #4ec4d3;
       background-color: #DDFFFF;
       border-radius: 10px;
       margin: 10px;
       padding-left: 1em;
     }
 
-    span {
-      margin-right: 2em;
-      font-size: 20px;
+    p {
+      display: inline;
+      margin-right: 3em;
     }
 
-
     .from {
-      padding-top: 1px;
       float: left;
       margin-left: 50px;
-      margin-top: 1px;
+      margin-top: 20px;
     }
 
 
@@ -97,9 +108,10 @@
 </head>
 <body>
   <div class = "header">
-    <h1>FILM.Review</h1>
+    <h1>FIL<span>M.R</span>eview</h1>
   </div>
 
+<div id = "a">
     <div class = "right_film">
      <div class = "tate">
       <img src = "publicdomainq-0003005png.jpg">
@@ -125,7 +137,10 @@
     <div class = "left_box">
       <img src="img/godfather.jpg">
       <div class = "profile">
-        <h4>監督:</h4>フランシス・フォード・コッポラ
+        <strong><b>ゴッドファーザー</b></strong>
+        <h3>制作国:アメリカ</h3>
+        <h3>制作年:1972</h3>
+        <h3>監督:フランシス・フォード・コッポラ</h3>
       </div>
     </div>
 
@@ -133,10 +148,10 @@
     <div class = "right_box">
     <s:iterator value = "#session.dtoListgod">
     <div class = "comment_box">
-    <span>投稿者:<s:property value = "name"/></span>
-    <span>評価:<s:property value = "star"/></span>
+    <p>投稿者:<s:property value = "name"/></p>
+    <p>評価:<s:property value = "star"/></p>
     <br>
-    <span>コメント:<br><s:property value = "comment"/></span>
+    感想:<s:property value = "comment"/>
     <br>
     </div>
     </s:iterator>
@@ -155,12 +170,13 @@
             </select>
         <br>
         <br>
-        感想:<s:textarea name = "comment" cols = "90" rows = "10"/>
+        感想:<s:textarea name = "comment" cols = "90" rows = "5" wrap = "hard"/>
         <s:submit value = "コメントする"/>
       </s:form>
       <p>homeに戻る場合は<a href ="home.jsp">こちら</a></p>
     </div>
     </div>
+  </div>
 
 
 

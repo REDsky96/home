@@ -7,11 +7,11 @@ import java.util.Map;
 
 import org.apache.struts2.interceptor.SessionAware;
 
-import com.movie.comment.dao.GodFatherDAO;
+import com.movie.comment.dao.OrangeDAO;
 import com.movie.comment.dto.NewCinemaParadiseDTO;
 import com.opensymphony.xwork2.ActionSupport;
 
-public class GodFatherComplete extends ActionSupport implements SessionAware {
+public class OrangeComplete extends ActionSupport implements SessionAware {
 
 	private String name;
 	private String star;
@@ -20,17 +20,17 @@ public class GodFatherComplete extends ActionSupport implements SessionAware {
 
 
 	private Map<String,Object>session;
-	List<NewCinemaParadiseDTO> dtoListgod = new ArrayList<NewCinemaParadiseDTO>();
+	List<NewCinemaParadiseDTO> dtoListOrange = new ArrayList<NewCinemaParadiseDTO>();
 
 
 
 	public String execute() throws SQLException {
 		String ret = ERROR;
-		GodFatherDAO dao = new GodFatherDAO();
+		OrangeDAO dao = new OrangeDAO();
 		int count = dao.insert(name, star, comment);
 		if (count>0) {
-			dtoListgod = dao.getComment();
-			session.put("dtoListgod", dtoListgod);
+			dtoListOrange = dao.getComment();
+			session.put("dtoListOrange", dtoListOrange);
 
 			ret = SUCCESS;
 		}
@@ -69,5 +69,6 @@ public class GodFatherComplete extends ActionSupport implements SessionAware {
 	public void setComment(String comment) {
 		this.comment = comment;
 	}
+
 
 }
