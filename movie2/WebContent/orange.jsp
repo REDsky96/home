@@ -12,7 +12,7 @@
 <title>Orange</title>
 <style type="text/css">
   .header{
-    whidth: 100%;
+    width: 1424px;
     height: 70px;
     background-color: black;
     color:white;
@@ -21,11 +21,10 @@
     }
 
     span {
-      color: red;
-    }
+      color: red;}
 
-    #main {
-      whidth: 100%;
+    #main{
+      width: 1424px;
       height: 720px;
       background: linear-gradient(#C2EEFF,#75A9FF);
       }
@@ -45,13 +44,13 @@
 
     .left_box {
       float: left;
-      width: 30%;
+      width: 440px;
       margin-left: 60px;
       margin-top: 30px;
     }
 
     .left_box img {
-      width: 80%;
+      width: 340px;
     }
 
     .profile {
@@ -79,6 +78,7 @@
       margin-top: 30px;
       margin-bottom: 20px;
       width: 100%;
+      word-break: break-word;
       height: 350px;
       overflow: scroll;
       background-color: rightgrey;
@@ -101,6 +101,10 @@
       float: left;
       margin-left: 50px;
       margin-top: 20px;
+    }
+
+    .impression {
+      width: 600px;
     }
 
 
@@ -152,8 +156,10 @@
     <p>投稿者:<s:property value = "name"/></p>
     <p>評価:<s:property value = "star"/></p>
     <br>
-    感想:<s:property value = "comment"/>
+    <div class = "impression">
+    <s:property value = "comment"/>
     <br>
+    </div>
     </div>
     </s:iterator>
     </div>

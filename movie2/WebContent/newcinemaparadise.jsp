@@ -12,7 +12,7 @@
 <title>NewCinemaParadise</title>
 <style type="text/css">
   .header{
-    whidth: 100%;
+    width: 1424px;
     height: 70px;
     background-color: black;
     color:white;
@@ -21,11 +21,10 @@
     }
 
     span {
-      color: red;
-    }
+      color: red;}
 
-    #a {
-      whidth: 100%;
+    #main{
+      width: 1424px;
       height: 720px;
       background: linear-gradient(#C2EEFF,#75A9FF);
       }
@@ -45,13 +44,13 @@
 
     .left_box {
       float: left;
-      width: 30%;
+      width: 440px;
       margin-left: 60px;
       margin-top: 30px;
     }
 
     .left_box img {
-      width: 80%;
+      width: 340px;
     }
 
     .profile {
@@ -79,7 +78,7 @@
       margin-top: 30px;
       margin-bottom: 20px;
       width: 100%;
-      word-break: break-word;
+      word-wrap: break-word;
       height: 350px;
       overflow: scroll;
       background-color: rightgrey;
@@ -116,7 +115,7 @@
     <h1>FIL<span>M.R</span>eview</h1>
   </div>
 
-<div id = "a">
+<div id = "main">
     <div class = "right_film">
      <div class = "tate">
       <img src = "publicdomainq-0003005png.jpg">
@@ -158,7 +157,7 @@
     <p>評価:<s:property value = "star"/></p>
     <br>
     <div class = "impression">
-    感想:<s:property value = "comment"/>
+    <s:property value = "comment"/>
     <br>
     </div>
     </div>
@@ -170,7 +169,7 @@
       <s:form action = "NewCinemaParadiseComplete">
         投稿者名:<input type = "text" name = "name" value = ""/>
         評価:<select name = "star">
-              <option value = "⭐">⭐️</option>
+              <option value = "⭐️">⭐️</option>
               <option value = "⭐⭐">⭐⭐</option>
               <option value = "⭐⭐⭐">⭐⭐⭐</option>
               <option value = "⭐⭐⭐⭐">⭐⭐⭐⭐</option>
@@ -178,7 +177,7 @@
             </select>
         <br>
         <br>
-        感想:<s:textarea name = "comment" cols = "90" rows = "5" wrap = "hard"/>
+        感想:<s:textarea name = "comment" cols = "90" rows = "5"/>
         <s:submit value = "コメントする"/>
       </s:form>
       <p>homeに戻る場合は<a href ="home.jsp">こちら</a></p>

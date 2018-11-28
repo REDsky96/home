@@ -8,7 +8,7 @@ create table comments(
 id int not null,
 name varchar(50),
 star varchar(50),
-comment varchar(255),
+comment varchar(500),
 insert_date datetime,
 updated_date datetime
 );

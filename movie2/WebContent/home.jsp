@@ -12,7 +12,7 @@
 <title>home</title>
 <style type="text/css">
   .header{
-    whidth: 100%;
+    width: 1424px;
     height: 70px;
     background-color: black;
     color:white;
@@ -23,9 +23,9 @@
     span {
       color: red;}
 
-    main{
-      background-color: #DD0000;
-      width: 100%;
+    #main{
+      width: 1424px;
+      height: 720px;
       text-align: center;
       }
 
@@ -42,19 +42,19 @@
       display: block;
     }
 
-    table img{
+    .pic {
       display: inline;
-      margin: 30px 40px;
-      width: 65%;
+    }
+
+    .pic img {
+      width: 170px;
+      margin: 30px 30px;
     }
 
     .footer {
-      whidth: 100%;
+      width: 1424px;
       height: 70px;
       background-color: black;
-      position:absolute;
-      bottom: 0;
-      left: 0;
       }
 
 </style>
@@ -88,15 +88,14 @@
      </div>
     </div>
 
-    <table>
-      <tr>
-        <td><a href ='<s:url action = "NewCinemaParadise"/>'><img src="img/newcinema.jpg"></a></td>
-        <td><a href ='<s:url action = "GodFather"/>'><img src="img/godfather.jpg"></a></td>
-        <td><a href ='<s:url action = "Orange"/>'><img src="img/orange.jpg"></a></td>
-        <td><a href ='<s:url action = "Schindler"/>'><img src="img/list.jpg"></a></td>
-        <td><img src="img/darkknight.jpg"></td>
-      </tr>
-    </table>
+      <div class = "pic">
+        <a href ='<s:url action = "NewCinemaParadise"/>'><img src="img/newcinema.jpg"></a>
+        <a href ='<s:url action = "GodFather"/>'><img src="img/godfather.jpg"></a>
+        <a href ='<s:url action = "Orange"/>'><img src="img/orange.jpg"></a>
+        <a href ='<s:url action = "Schindler"/>'><img src="img/list.jpg"></a>
+        <a href ='<s:url action = "DarkKnight"/>'><img src="img/darkknight.jpg"></a>
+      </div>
+
   </div>
 
   <div class = "footer">

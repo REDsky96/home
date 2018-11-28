@@ -9,10 +9,10 @@
 <meta name="description" content="" />
 <meta name="keywords" content="" />
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<title>GodFather</title>
+<title>GodFatherComplete</title>
 <style type="text/css">
-  .header{
-    whidth: 100%;
+.header{
+    width: 1424px;
     height: 70px;
     background-color: black;
     color:white;
@@ -21,11 +21,10 @@
     }
 
     span {
-      color: red;
-    }
+      color: red;}
 
-    #a {
-      whidth: 100%;
+    #main{
+      width: 1424px;
       height: 720px;
       background: linear-gradient(#C2EEFF,#75A9FF);
       }
@@ -45,13 +44,13 @@
 
     .left_box {
       float: left;
-      width: 30%;
+      width: 440px;
       margin-left: 60px;
       margin-top: 30px;
     }
 
     .left_box img {
-      width: 80%;
+      width: 340px;
     }
 
     .profile {
@@ -79,6 +78,7 @@
       margin-top: 30px;
       margin-bottom: 20px;
       width: 100%;
+      word-break: break-word;
       height: 350px;
       overflow: scroll;
       background-color: rightgrey;
@@ -103,6 +103,10 @@
       margin-top: 20px;
     }
 
+    .impression {
+      width: 600px;
+    }
+
 
 </style>
 </head>
@@ -111,7 +115,7 @@
     <h1>FIL<span>M.R</span>eview</h1>
   </div>
 
-<div id = "a">
+<div id = "main">
     <div class = "right_film">
      <div class = "tate">
       <img src = "publicdomainq-0003005png.jpg">
@@ -141,7 +145,7 @@
         <h3>制作国:アメリカ</h3>
         <h3>制作年:1972</h3>
         <h3>監督:フランシス・フォード・コッポラ</h3>
-      </div>
+     </div>
     </div>
 
   <div class = "right">
@@ -151,8 +155,10 @@
     <p>投稿者:<s:property value = "name"/></p>
     <p>評価:<s:property value = "star"/></p>
     <br>
-    感想:<s:property value = "comment"/>
+    <div class = "impression">
+    <s:property value = "comment"/>
     <br>
+    </div>
     </div>
     </s:iterator>
     </div>
@@ -170,7 +176,7 @@
             </select>
         <br>
         <br>
-        感想:<s:textarea name = "comment" cols = "90" rows = "5" wrap = "hard"/>
+        感想:<s:textarea name = "comment" cols = "90" rows = "5"/>
         <s:submit value = "コメントする"/>
       </s:form>
       <p>homeに戻る場合は<a href ="home.jsp">こちら</a></p>

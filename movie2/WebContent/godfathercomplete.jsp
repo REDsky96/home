@@ -11,8 +11,8 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <title>GodFatherComplete</title>
 <style type="text/css">
-  .header{
-    whidth: 100%;
+.header{
+    width: 1424px;
     height: 70px;
     background-color: black;
     color:white;
@@ -21,14 +21,13 @@
     }
 
     span {
-      color: red;
-    }
+      color: red;}
 
-    #main {
-      whidth: 100%;
+    #main{
+      width: 1424px;
       height: 720px;
       background: linear-gradient(#C2EEFF,#75A9FF);
-    }
+      }
 
     .right_film{
       float: right;
@@ -45,22 +44,22 @@
 
     .left_box {
       float: left;
-      width: 30%;
+      width: 440px;
       margin-left: 60px;
       margin-top: 30px;
     }
 
     .left_box img {
-      width: 80%;
+      width: 340px;
     }
 
     .profile {
       margin-top: 1em;
       line-height: 1em;
       text-shadow: 1px 1px 0 #000,
-                   -1px 1px 0 #000,
-                   1px -1px 0 #000,
-                   -1px -1px 0 #000;
+               -1px 1px 0 #000,
+               1px -1px 0 #000,
+               -1px -1px 0 #000;
       color: white;
     }
 
@@ -79,9 +78,10 @@
       margin-top: 30px;
       margin-bottom: 20px;
       width: 100%;
-      word-wrap: break-word;
+      word-break: break-word;
       height: 350px;
       overflow: scroll;
+      background-color: rightgrey;
     }
 
     .comment_box {
@@ -101,6 +101,10 @@
       float: left;
       margin-left: 50px;
       margin-top: 20px;
+    }
+
+    .impression {
+      width: 600px;
     }
 
 
@@ -151,8 +155,10 @@
     <p>投稿者:<s:property value = "name"/></p>
     <p>評価:<s:property value = "star"/></p>
     <br>
-    感想:<s:property value = "comment"/>
+    <div class = "impression">
+    <s:property value = "comment"/>
     <br>
+    </div>
     </div>
     </s:iterator>
     </div>

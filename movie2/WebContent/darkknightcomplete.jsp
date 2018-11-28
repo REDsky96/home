@@ -9,9 +9,9 @@
 <meta name="description" content="" />
 <meta name="keywords" content="" />
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<title>NewCinemaParadiseComplete</title>
+<title>DarkKnight</title>
 <style type="text/css">
- .header{
+  .header{
     width: 1424px;
     height: 70px;
     background-color: black;
@@ -57,9 +57,9 @@
       margin-top: 1em;
       line-height: 1em;
       text-shadow: 1px 1px 0 #000,
-                   -1px 1px 0 #000,
-                   1px -1px 0 #000,
-                   -1px -1px 0 #000;
+               -1px 1px 0 #000,
+               1px -1px 0 #000,
+               -1px -1px 0 #000;
       color: white;
     }
 
@@ -78,9 +78,10 @@
       margin-top: 30px;
       margin-bottom: 20px;
       width: 100%;
-      word-wrap: break-word;
+      word-break: break-word;
       height: 350px;
       overflow: scroll;
+      background-color: rightgrey;
     }
 
     .comment_box {
@@ -105,7 +106,6 @@
     .impression {
       width: 600px;
     }
-
 
 
 </style>
@@ -139,18 +139,19 @@
     </div>
 
     <div class = "left_box">
-      <img src="img/newcinema.jpg">
+      <img src="img/darkknight.jpg">
       <div class = "profile">
-        <strong><b>ニューシネマパラダイス</b></strong>
-        <h3>制作国:イタリア/フランス</h3>
-        <h3>制作年:1989</h3>
-        <h3>監督:ジュゼッペ・トルナトーレ</h3>
-     </div>
+        <strong><b>ダークナイト</b></strong>
+        <h3>制作国:アメリカ</h3>
+        <h3>制作年:2008</h3>
+        <h3>監督:クリストファー・ノーラン</h3>
+
+      </div>
     </div>
 
   <div class = "right">
     <div class = "right_box">
-    <s:iterator value = "#session.dtoList">
+    <s:iterator value = "#session.dtoListDark">
     <div class = "comment_box">
     <p>投稿者:<s:property value = "name"/></p>
     <p>評価:<s:property value = "star"/></p>
@@ -165,7 +166,7 @@
 
     <div class = "form">
     <h2>〜コメントを書く〜</h2>
-      <s:form action = "NewCinemaParadiseComplete">
+      <s:form action = "DarkKnightComplete">
         投稿者名:<input type = "text" name = "name" value = ""/>
         評価:<select name = "star">
               <option value = "⭐">⭐️</option>
@@ -176,7 +177,7 @@
             </select>
         <br>
         <br>
-        感想:<s:textarea name = "comment" cols = "90" rows = "5"/>
+        感想:<s:textarea name = "comment" cols = "90" rows = "5" wrap = "hard"/>
         <s:submit value = "コメントする"/>
       </s:form>
       <p>homeに戻る場合は<a href ="home.jsp">こちら</a></p>
