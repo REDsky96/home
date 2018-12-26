@@ -73,7 +73,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="countDownLabel" destination="pn1-oW-gUa" id="ZwG-Oa-cV6"/>
+                        <outlet property="countDownLabel" destination="pn1-oW-gUa" id="Clu-nn-9Kh"/>
                         <segue destination="pBo-vs-QQg" kind="show" identifier="goSetting" id="R1e-XN-ZbN"/>
                     </connections>
                 </viewController>
